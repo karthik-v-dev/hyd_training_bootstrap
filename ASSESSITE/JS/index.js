@@ -8,6 +8,10 @@
       let un_order = document.querySelector(".navbar-nav");
       un_order.classList.add("text-center");
 
+      let nav_list = document.querySelectorAll(".nav-item");
+      nav_list.forEach((ele)=>{
+        ele.style.fontSize ="large";});
+
       let division = document.querySelector(".px-10");
       division.style.padding = "2rem 0px";
 
@@ -18,6 +22,27 @@
       })
       console.log(user_count);
       // user_count.classList.add()
+      let  d_block= document.querySelectorAll(".row");
+      console.log(d_block);
+      for(let i=0; i<d_block.length;i++){
+        if( i==2){
+          continue;
+        }
+        d_block[i].classList.add('row-block');
+        d_block[i].classList.remove('row');
+      }
+      // d_block.forEach((ele)=>{
+      //   ele.classList.add('row-block');
+      //   ele.classList.remove('row');
+      // })
+      
+
+    }
+    if (window.innerWidth <= 992 && window.innerWidth >652) {
+      let nav_list = document.querySelectorAll(".nav-item");
+      nav_list.forEach((ele)=>{
+        ele.style.fontSize ="6px";
+      })
     }
   }
   const learnerCount = () => {
