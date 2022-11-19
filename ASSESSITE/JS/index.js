@@ -35,7 +35,11 @@
       //   ele.classList.add('row-block');
       //   ele.classList.remove('row');
       // })
-      
+      let pl_40 = document.querySelectorAll(".pl-40");
+      pl_40.forEach((ele)=>{
+           ele.style.paddingLeft ="40px";
+           ele.style.marginTop ="30px";
+      })
 
     }
     if (window.innerWidth <= 992 && window.innerWidth >652) {
