@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .align-form-inputs {
+            text-align: -webkit-center;
+            display:grid;
+            grid-template-columns: repeat(10,2fr);
+           
+          
+            
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .reg {
+            font-size: x-large;
+            font-weight: 900;
+            text-shadow: -1px 3px #ccc;
+            padding: 5px 0px;
+            width: 100%;
+            height: auto;
+            background: rgb(79, 221, 108);
+
+        }
+
+        strong {
+            padding: 2px 5px 5px 5px;
+            color: white;
+
+        }
+
+        #F-form {
+            grid-column: 5/7;
+            display: inline-block;
+            text-align: center;
+            width: 300px;
+            height: auto;
+            background-color: rgb(233, 237, 125);
+            outline: 2px solid gold;
+            box-sizing: border-box;
+            box-shadow: 2px 6px rgb(244, 244, 244);
+            margin: auto;
+           
+        }
+      
+  
+        .in-same {
+            font-size: large;
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            margin: 0px 2px;
+        }
+
+        #F-form>input {
+            margin: 12px 0px;
+
+        }
+
+        .btn {
+            color: white;
+            font-size: large;
+            font-weight: 900;
+            text-shadow: 1px -1px #ccc;
+            background: rgb(76, 139, 242);
+            word-spacing: 1px;
+            border-radius: 8px;
+            outline: none;
+            width: 100px;
+            border: 0;
+            padding: 12px 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="align-form-inputs">
+
+        <form name="f" action="index.html" onsubmit="return validation()" id="F-form" target="_blank" method="post">
+            <div class="reg"><strong>Registration</strong></div>
+            <input type="text" name="Fname" class="F-name in-same" placeholder="First Name"><br />
+            <input type="text" name="Lname" class="L-name in-same" placeholder="Last Name"><br />
+            <input type="email" name="Email" class="E-mail in-same" placeholder="Email"><br />
+            <input type="tel" name="Phone" class="T-No in-same" placeholder="Mobile Number"><br />
+            <input type="text" name="Pword" class="P-word in-same" placeholder="Password"><br />
+            <input type="text" name="CPword" class="Cp-word in-same" placeholder="Confirm Password"><br />
+<textarea id="w3review" name="w3review" rows="4" cols="40">
+            <input type="submit" value="submit" class="btn">
+
+
+        </form>
+    </div>
+    <script>
+     const validation=()=>{  
+        var namePat =/[A-Za-z]/;
+        var emailPat =/[A-za-z0-9]/
+        var x  = document.querySelector("form");
+        if(x.children.Fname.value.match(namePat)){
+            console.log(x.children.Fname.value.match(namePat));
+            console.log(x.children.Fname.value);
+            return true;
+        }else{
+            console.log(x.children.Fname.value.match(namePat));
+            console.log(x.children.Fname.value);
+            return false;
+        }
+    }
+    </script>
+</body>
+
+</html>
